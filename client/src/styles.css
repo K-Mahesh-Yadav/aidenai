@@ -1,19 +1,41 @@
+@import "./components/Navbar.css";
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
 .task-item {
   border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
   background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .task-item h3 {
   margin: 0;
   color: #333;
+  font-size: 1.5rem;
 }
 
 .task-item p {
   margin: 5px 0;
   color: #666;
+  font-size: 1rem;
+}
+
+.task-item.overdue {
+  border-color: red;
+  background-color: #ffe6e6;
 }
 
 form {

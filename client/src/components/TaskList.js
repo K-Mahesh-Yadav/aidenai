@@ -11,6 +11,7 @@ const TaskList = () => {
         const response = await axios.get("http://localhost:5000/api/tasks");
         setTasks(response.data);
       } catch (error) {
+        console.log("response.data");
         console.error(error);
       }
     };
@@ -20,9 +21,11 @@ const TaskList = () => {
   return (
     <div>
       <h2>Task List</h2>
-      {tasks.map((task) => (
-        <TaskItem key={task._id} task={task} />
-      ))}
+      <div className="task-grid">
+        {tasks.map((task) => (
+          <TaskItem key={task._id} task={task} />
+        ))}
+      </div>
     </div>
   );
 };
