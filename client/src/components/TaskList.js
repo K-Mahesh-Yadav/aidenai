@@ -6,10 +6,15 @@ const TaskList = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/api/tasks")
-      .then((response) => setTasks(response.data))
-      .catch((error) => console.error(error));
+    const fetchTasks = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/tasks");
+        setTasks(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchTasks();
   }, []);
 
   return (

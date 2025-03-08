@@ -7,8 +7,8 @@ const TaskItem = ({ task }) => {
       <p>Due Date: {new Date(task.due_date).toLocaleDateString()}</p>
       <p>Status: {task.status}</p>
       <p>Priority: {task.priority}</p>
-      <p>User Id: {task.priority}</p>
-      <p>Assigned to : {task.priority}</p>
+      <p>User ID: {task.user_id}</p>
+      <p>Assigned To: {task.assigned_to}</p>
     </div>
   );
 };
