@@ -15,3 +15,38 @@
   margin: 5px 0;
   color: #666;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
